@@ -32,3 +32,27 @@ async function searchImages(){
             noResults.style.display = "block";
             return;
         }
+
+        results.forEach((result)=>{
+            const image=document.createElement("img");
+            image.src=result.urls.small;
+            image.alt=result.alt_description || "Image";
+
+            const imageLink=document.createElement("a");
+            imageLink.href=result.links.html;
+            imageLink.target="_blank";
+
+            imageLink.appendChild(image);
+            searchResult.appendChild(imageLink);
+        });
+
+          if(results.length > 0){
+            searchMoreBtn.style.display="block";
+        }
+
+    } catch (error) {
+        console.log(error);
+    } finally {
+        loader.style.display = "none";
+    }
+}
