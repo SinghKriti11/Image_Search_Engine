@@ -62,3 +62,8 @@ searchForm.addEventListener("submit",(e)=>{
     page=1;
     searchImages();
 });
+
+searchMoreBtn.addEventListener("click",()=>{
+    page++;
+    searchImages();
+});
