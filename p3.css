@@ -72,7 +72,7 @@ form button{
     height: 230px;
     object-fit: cover;
     border-radius:5px;
-} 
+}
 .loader {
     display: none;
     margin: 30px auto;
