@@ -88,3 +88,10 @@ form button{
         transform: rotate(360deg);
     }
 }
+.no-results {
+    display: none;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    color: #ddd;
+}
