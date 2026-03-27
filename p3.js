@@ -8,3 +8,13 @@ const noResults = document.getElementById("no-results");
 
 let keyword="";
 let page=1;
+
+async function searchImages(){
+    keyword = searchBox.value.trim();
+    if(keyword === "") return;
+
+    loader.style.display = "block";
+    noResults.style.display = "none";
+    searchMoreBtn.style.display = "none";
+
+    const url=`https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accessKey}&per_page=12`;
