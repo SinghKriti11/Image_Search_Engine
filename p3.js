@@ -18,3 +18,17 @@ async function searchImages(){
     searchMoreBtn.style.display = "none";
 
     const url=`https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accessKey}&per_page=12`;
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        const results = data.results;
+
+        if(page === 1){
+            searchResult.innerHTML = "";
+        }
+
+        if(results.length === 0 && page === 1){
+            noResults.style.display = "block";
+            return;
+        }
