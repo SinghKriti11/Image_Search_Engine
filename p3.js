@@ -5,3 +5,6 @@ const searchResult=document.getElementById("search-result");
 const searchMoreBtn=document.getElementById("show-more-btn");
 const loader = document.getElementById("loader");
 const noResults = document.getElementById("no-results");
+
+let keyword="";
+let page=1;
