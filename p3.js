@@ -56,3 +56,9 @@ async function searchImages(){
         loader.style.display = "none";
     }
 }
+
+searchForm.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    page=1;
+    searchImages();
+});
